@@ -10,10 +10,19 @@ import static java.util.stream.Collectors.*;
 public class Frequency {
 	List<String> words;
 	Map<String, Integer> words_freq = new HashMap<String, Integer>();
+	Map<String, Integer> sorted_words = new HashMap<String, Integer>();
 	
 	public Frequency(List<String> word_list) {
 		assert !word_list.isEmpty();
 		words = word_list;
+	}
+	
+	public Map<String, Integer> getSortedWords() {
+		return sorted_words;
+	}
+	
+	public Map<String, Integer> getWordsFreq() {
+		return words_freq;
 	}
 	
 	public void calculateFreqs() {
@@ -27,8 +36,6 @@ public class Frequency {
 				words_freq.put(word, 1);
 			}
 		}
-		
-		System.out.println(words_freq);
 	}
 	
 	public void sort() {
@@ -42,6 +49,6 @@ public class Frequency {
 						toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2,
 								LinkedHashMap::new));
 		
-		System.out.println(sorted);
+		sorted_words = sorted;
 	}
 }
