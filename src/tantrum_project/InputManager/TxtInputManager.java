@@ -20,6 +20,10 @@ public class TxtInputManager implements InputManager {
 		path = file_path;
 	}
 	
+	public List<String> getUnfilteredWords() {
+		return unfiltered_words;
+	}
+	
 	public List<String> getFilteredWords() {
 		return filtered_words;
 	}
