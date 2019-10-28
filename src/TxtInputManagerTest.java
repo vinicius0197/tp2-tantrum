@@ -23,5 +23,14 @@ class TxtInputManagerTest {
 		words = txt_file.getUnfilteredWords();
 		assertTrue(!words.isEmpty());
 	}
+	
+	@Test
+	void testFilteredWords() {
+		List<String> words;
+		txt_file.ExtractWords();
+		txt_file.RemoveStopWords();
+		words = txt_file.getFilteredWords();
+		assertTrue(!words.isEmpty());
+	}
 
 }
