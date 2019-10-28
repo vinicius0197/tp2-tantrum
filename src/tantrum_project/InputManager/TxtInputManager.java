@@ -29,6 +29,8 @@ public class TxtInputManager implements InputManager {
 	}
 	
 	public void RemoveStopWords() {
+		assert stopwords instanceof List;
+		
 		stopwords = this.LoadFile("stopwords.txt");
 		
 		for(String word: unfiltered_words) {
