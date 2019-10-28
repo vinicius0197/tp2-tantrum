@@ -1,0 +1,6 @@
+This is an example file. This file should contain some stopwords
+for test.
+
+This is a new line.
+
+This is another file.
